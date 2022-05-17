@@ -47,6 +47,24 @@
         </configuration>
         </plugin>
 
+         <profiles>
+    <profile>
+      <id>development</id>
+      <properties>
+          <appender-name>CONSOLE</appender-name>
+      </properties>
+    </profile>
+    <profile>
+      <id>file_log</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+          <appender-name>FILE</appender-name>
+      </properties>
+    </profile>
+  </profiles>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
